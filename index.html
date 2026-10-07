@@ -3,249 +3,240 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GAMEZONE — discover games, follow esports, meet your squad, and level up your gaming life.">
-  <title>GAMEZONE — Enter the Game</title>
+  <meta name="description" content="Discover new songs, artists, albums and playlists with MUSICWAVE.">
+  <title>MUSICWAVE — Feel the Music</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <script src="app.js" defer></script>
 </head>
 <body>
-  <div class="page-transition" aria-hidden="true"></div>
   <header class="site-header">
     <div class="header-inner">
-      <a class="brand" href="#home" aria-label="GAMEZONE home"><span class="brand-mark">G</span><span>GAME<span class="accent">ZONE</span></span></a>
+      <a class="brand" href="#home" aria-label="MUSICWAVE home"><span class="brand-icon" aria-hidden="true">♫</span><span>MUSIC<span>WAVE</span></span></a>
       <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Toggle navigation">
       <label class="menu-button" for="nav-toggle" aria-label="Open navigation"><span></span><span></span><span></span></label>
       <nav class="main-nav" aria-label="Main navigation">
         <a href="#home">Home</a>
-        <a href="#games">Games</a>
-        <a href="#news">News</a>
-        <a href="#esports">Esports</a>
-        <a href="#community">Community</a>
-        <a href="#tournaments">Tournaments</a>
+        <a href="#discover">Discover</a>
+        <a href="#trending">Music</a>
+        <a href="#artists">Artists</a>
+        <a href="#albums">Albums</a>
+        <a href="#genres">Genres</a>
+        <a href="#about">About</a>
       </nav>
       <div class="header-actions">
-        <a class="login-link" href="#account">Log in</a>
-        <a class="button button-small button-primary" href="#games">Play Now <span aria-hidden="true">↗</span></a>
+        <a class="search-link" href="#search" aria-label="Search music">⌕ <span>Search</span></a>
+        <a class="login-link" href="#login">Login</a>
+        <a class="button button-small button-primary" href="#register">Sign Up <span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </header>
 
   <main>
     <section class="hero" id="home" aria-labelledby="hero-title">
-      <div class="hero-backdrop"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-content page-width">
-        <p class="eyebrow"><span class="live-dot"></span> YOUR NEXT ADVENTURE STARTS HERE</p>
-        <p class="hero-kicker">FEATURED GAME <span> / 01</span></p>
-        <h1 id="hero-title">BLACK MYTH<br><span>WUKONG</span></h1>
-        <p class="hero-copy">Destined for greatness. Become the Monkey King in a breathtaking action RPG inspired by Chinese mythology.</p>
-        <div class="hero-meta">
-          <span class="tag">ACTION RPG</span><span class="meta-rating"><span class="star">★</span> 9.4 <small>/ 10</small></span><span class="meta-divider"></span><span>PC · PS5</span>
-        </div>
+        <p class="eyebrow"><span class="live-dot"></span> YOUR SOUND. YOUR WORLD.</p>
+        <h1 id="hero-title">Feel The<br><span>Music.</span></h1>
+        <p class="hero-copy">Discover new songs, artists and albums that match your mood. Find your rhythm, wherever life takes you.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#games">Play Now <span aria-hidden="true">↗</span></a>
-          <a class="button button-outline" href="#featured-story">View Details <span aria-hidden="true">→</span></a>
+          <a class="button button-primary" href="#discover">Explore Music <span aria-hidden="true">↗</span></a>
+          <a class="button button-glass" href="#player"><span class="play-symbol" aria-hidden="true">▶</span> Start Listening</a>
         </div>
-        <div class="hero-pagination"><span class="pagination-active"></span><span></span><span></span><span></span><small>01 <i>/</i> 04</small></div>
+        <div class="hero-note"><span class="avatar-stack" aria-hidden="true"><i>♪</i><i>♫</i><i>♬</i></span><span><b>2.4M+</b> music lovers are listening</span></div>
       </div>
-      <a class="hero-scroll" href="#games"><span></span> SCROLL TO EXPLORE</a>
+      <aside class="hero-featured" aria-label="Featured album">
+        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=950&q=85" alt="Singer performing on stage beneath dramatic lights">
+        <div class="featured-shade"></div>
+        <div class="featured-caption"><span class="featured-label">THIS WEEK'S FEATURE</span><h2>After<br>Hours</h2><p>The Weeknd <span>·</span> 2020</p><a href="#albums" aria-label="Explore After Hours album">↗</a></div>
+        <span class="featured-index">01 <i>/</i> 06</span>
+      </aside>
+      <span class="hero-orb orb-one" aria-hidden="true"></span>
+      <span class="hero-orb orb-two" aria-hidden="true"></span>
     </section>
 
-    <section class="search-strip page-width" aria-label="Search games">
-      <div><span class="eyebrow">FIND YOUR NEXT FAVORITE</span><p>What are you playing today?</p></div>
-      <form class="search-form" action="#games" method="get">
-        <label class="visually-hidden" for="game-search">Search games</label>
+    <section class="search-strip page-width" id="search" aria-label="Search music">
+      <div><p class="eyebrow">FIND YOUR NEXT FAVORITE</p><h2>What are you in the mood for?</h2></div>
+      <form class="search-form" action="#trending" method="get">
+        <label class="visually-hidden" for="music-search">Search songs, artists or albums</label>
         <span class="search-icon" aria-hidden="true">⌕</span>
-        <input id="game-search" name="q" type="search" placeholder="Search games...">
+        <input id="music-search" name="q" type="search" placeholder="Songs, artists, albums...">
         <button class="button button-primary" type="submit">Search <span aria-hidden="true">→</span></button>
       </form>
     </section>
 
-    <section class="section page-width" id="games" aria-labelledby="games-title">
+    <section class="section page-width" id="trending" aria-labelledby="trending-title">
       <div class="section-heading">
-        <div><p class="eyebrow">PICK YOUR NEXT QUEST</p><h2 id="games-title">FEATURED <span>GAMES</span></h2></div>
-        <a class="text-link" href="#categories">Explore all games <span>↗</span></a>
+        <div><p class="eyebrow">WHAT EVERYONE'S PLAYING</p><h2 id="trending-title">TRENDING <span>NOW</span></h2></div>
+        <a class="text-link" href="#charts">View charts <span>↗</span></a>
       </div>
-      <div class="game-grid">
-        <article class="game-card" id="featured-story">
-          <a class="game-image" href="#featured-story" aria-label="View Black Myth: Wukong"><img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=85" alt="Fantasy game world with atmospheric lighting"><span class="image-badge">HOT</span><span class="image-overlay"></span><span class="card-play">View Game <b>↗</b></span></a>
-          <div class="game-info"><div><h3>Black Myth: Wukong</h3><p>Action RPG <span>·</span> PC, PS5</p></div><span class="rating">★ 9.4</span></div>
-          <div class="game-foot"><span><i class="online-dot"></i> 128K playing</span><span class="game-platform">PC / PS5</span></div>
-        </article>
-        <article class="game-card">
-          <a class="game-image" href="#esports" aria-label="View Valorant"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=85" alt="Competitive gaming arena lit with vivid colors"><span class="image-overlay"></span><span class="card-play">View Game <b>↗</b></span></a>
-          <div class="game-info"><div><h3>VALORANT</h3><p>Tactical FPS <span>·</span> PC</p></div><span class="rating">★ 8.8</span></div>
-          <div class="game-foot"><span><i class="online-dot"></i> 92K playing</span><span class="game-platform">PC</span></div>
-        </article>
-        <article class="game-card">
-          <a class="game-image" href="#esports" aria-label="View Counter-Strike 2"><img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&fit=crop&w=800&q=85" alt="Player at a PC in a neon-lit gaming room"><span class="image-overlay"></span><span class="card-play">View Game <b>↗</b></span></a>
-          <div class="game-info"><div><h3>Counter-Strike 2</h3><p>Competitive FPS <span>·</span> PC</p></div><span class="rating">★ 8.7</span></div>
-          <div class="game-foot"><span><i class="online-dot"></i> 76K playing</span><span class="game-platform">PC</span></div>
-        </article>
-        <article class="game-card">
-          <a class="game-image" href="#featured-story" aria-label="View Elden Ring"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=85" alt="Ancient fantasy landscape beneath a dramatic sky"><span class="image-overlay"></span><span class="card-play">View Game <b>↗</b></span></a>
-          <div class="game-info"><div><h3>ELDEN RING</h3><p>Soulslike RPG <span>·</span> PC, Console</p></div><span class="rating">★ 9.6</span></div>
-          <div class="game-foot"><span><i class="online-dot"></i> 54K playing</span><span class="game-platform">PC / PS / Xbox</span></div>
-        </article>
-        <article class="game-card">
-          <a class="game-image" href="#esports" aria-label="View League of Legends"><img src="https://images.unsplash.com/photo-1603481546238-487240415921?auto=format&fit=crop&w=800&q=85" alt="Fantasy inspired gaming scene"><span class="image-overlay"></span><span class="card-play">View Game <b>↗</b></span></a>
-          <div class="game-info"><div><h3>League of Legends</h3><p>MOBA <span>·</span> PC</p></div><span class="rating">★ 8.9</span></div>
-          <div class="game-foot"><span><i class="online-dot"></i> 214K playing</span><span class="game-platform">PC</span></div>
-        </article>
-        <article class="game-card">
-          <a class="game-image" href="#community" aria-label="View Minecraft"><img src="https://images.unsplash.com/photo-1607513746994-51f730a44832?auto=format&fit=crop&w=800&q=85" alt="Colorful block-inspired game landscape"><span class="image-overlay"></span><span class="card-play">View Game <b>↗</b></span></a>
-          <div class="game-info"><div><h3>Minecraft</h3><p>Sandbox Survival <span>·</span> All platforms</p></div><span class="rating">★ 9.1</span></div>
-          <div class="game-foot"><span><i class="online-dot"></i> 187K playing</span><span class="game-platform">ALL PLATFORMS</span></div>
-        </article>
+      <div class="song-list">
+        <article class="song-card"><span class="song-rank">01</span><a class="song-cover" href="#player" aria-label="Play Blinding Lights"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=240&q=80" alt="Neon city at night"><span class="cover-play">▶</span></a><div class="song-info"><h3>Blinding Lights</h3><p>The Weeknd</p></div><span class="song-genre">SYNTH-POP</span><span class="song-album">After Hours</span><span class="song-duration">3:20</span><a class="song-play" href="#player" aria-label="Play Blinding Lights">▶</a></article>
+        <article class="song-card"><span class="song-rank">02</span><a class="song-cover" href="#player" aria-label="Play Shape of You"><img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=240&q=80" alt="Warm recording studio"><span class="cover-play">▶</span></a><div class="song-info"><h3>Shape of You</h3><p>Ed Sheeran</p></div><span class="song-genre">POP</span><span class="song-album">÷ (Divide)</span><span class="song-duration">3:53</span><a class="song-play" href="#player" aria-label="Play Shape of You">▶</a></article>
+        <article class="song-card"><span class="song-rank">03</span><a class="song-cover" href="#player" aria-label="Play As It Was"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=240&q=80" alt="Artist performing beneath stage lights"><span class="cover-play">▶</span></a><div class="song-info"><h3>As It Was</h3><p>Harry Styles</p></div><span class="song-genre">SYNTH-POP</span><span class="song-album">Harry's House</span><span class="song-duration">2:47</span><a class="song-play" href="#player" aria-label="Play As It Was">▶</a></article>
+        <article class="song-card"><span class="song-rank">04</span><a class="song-cover" href="#player" aria-label="Play Starboy"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=240&q=80" alt="Purple and blue city lights"><span class="cover-play">▶</span></a><div class="song-info"><h3>Starboy</h3><p>The Weeknd, Daft Punk</p></div><span class="song-genre">R&amp;B</span><span class="song-album">Starboy</span><span class="song-duration">3:50</span><a class="song-play" href="#player" aria-label="Play Starboy">▶</a></article>
+        <article class="song-card"><span class="song-rank">05</span><a class="song-cover" href="#player" aria-label="Play Perfect"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=240&q=80" alt="Concert lights glowing in the dark"><span class="cover-play">▶</span></a><div class="song-info"><h3>Perfect</h3><p>Ed Sheeran</p></div><span class="song-genre">POP</span><span class="song-album">÷ (Divide)</span><span class="song-duration">4:23</span><a class="song-play" href="#player" aria-label="Play Perfect">▶</a></article>
+        <article class="song-card"><span class="song-rank">06</span><a class="song-cover" href="#player" aria-label="Play Believer"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=240&q=80" alt="Crowd at a live rock concert"><span class="cover-play">▶</span></a><div class="song-info"><h3>Believer</h3><p>Imagine Dragons</p></div><span class="song-genre">ALT. ROCK</span><span class="song-album">Evolve</span><span class="song-duration">3:24</span><a class="song-play" href="#player" aria-label="Play Believer">▶</a></article>
       </div>
     </section>
 
-    <section class="section category-section" id="categories" aria-labelledby="category-title">
+    <section class="section section-tint" id="discover" aria-labelledby="artists-title">
       <div class="page-width">
-        <div class="section-heading"><div><p class="eyebrow">WHAT'S YOUR PLAYSTYLE?</p><h2 id="category-title">GAME <span>CATEGORIES</span></h2></div><span class="muted">Find a world that feels like yours.</span></div>
-        <div class="category-grid">
-          <a class="category-card" href="#games"><span class="category-icon">⚔</span><span><b>Action</b><small>248 games</small></span><i>↗</i></a>
-          <a class="category-card" href="#games"><span class="category-icon">✧</span><span><b>RPG</b><small>186 games</small></span><i>↗</i></a>
-          <a class="category-card" href="#games"><span class="category-icon">⌖</span><span><b>FPS</b><small>132 games</small></span><i>↗</i></a>
-          <a class="category-card" href="#games"><span class="category-icon">♟</span><span><b>Strategy</b><small>97 games</small></span><i>↗</i></a>
-          <a class="category-card" href="#games"><span class="category-icon">➤</span><span><b>Adventure</b><small>163 games</small></span><i>↗</i></a>
-          <a class="category-card" href="#games"><span class="category-icon">⌂</span><span><b>Survival</b><small>84 games</small></span><i>↗</i></a>
-          <a class="category-card" href="#games"><span class="category-icon">◉</span><span><b>Sports</b><small>76 games</small></span><i>↗</i></a>
-          <a class="category-card" href="#games"><span class="category-icon">☠</span><span><b>Horror</b><small>59 games</small></span><i>↗</i></a>
+        <div class="section-heading" id="artists">
+          <div><p class="eyebrow">THE VOICES MOVING US</p><h2 id="artists-title">POPULAR <span>ARTISTS</span></h2></div>
+          <a class="text-link" href="#artists">Discover artists <span>↗</span></a>
+        </div>
+        <div class="artist-grid">
+          <article class="artist-card"><a class="artist-image" href="#artists"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=500&q=80" alt="The Weeknd performing live"><span class="artist-play">▶</span></a><h3>The Weeknd</h3><p>R&amp;B · Pop</p><span class="followers">84.2M monthly listeners</span><a class="artist-link" href="#artists">View Artist <span>→</span></a></article>
+          <article class="artist-card"><a class="artist-image" href="#artists"><img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=500&q=80" alt="Taylor Swift on stage"><span class="artist-play">▶</span></a><h3>Taylor Swift</h3><p>Pop · Country</p><span class="followers">91.6M monthly listeners</span><a class="artist-link" href="#artists">View Artist <span>→</span></a></article>
+          <article class="artist-card"><a class="artist-image" href="#artists"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80" alt="Ed Sheeran performing with a guitar"><span class="artist-play">▶</span></a><h3>Ed Sheeran</h3><p>Pop · Folk</p><span class="followers">78.3M monthly listeners</span><a class="artist-link" href="#artists">View Artist <span>→</span></a></article>
+          <article class="artist-card"><a class="artist-image" href="#artists"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=500&q=80" alt="Bruno Mars singing"><span class="artist-play">▶</span></a><h3>Bruno Mars</h3><p>Pop · Funk</p><span class="followers">68.7M monthly listeners</span><a class="artist-link" href="#artists">View Artist <span>→</span></a></article>
+          <article class="artist-card"><a class="artist-image" href="#artists"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Billie Eilish portrait"><span class="artist-play">▶</span></a><h3>Billie Eilish</h3><p>Alt-pop · Indie</p><span class="followers">72.1M monthly listeners</span><a class="artist-link" href="#artists">View Artist <span>→</span></a></article>
+          <article class="artist-card"><a class="artist-image" href="#artists"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=500&q=80" alt="Imagine Dragons at a concert"><span class="artist-play">▶</span></a><h3>Imagine Dragons</h3><p>Alternative · Rock</p><span class="followers">54.9M monthly listeners</span><a class="artist-link" href="#artists">View Artist <span>→</span></a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section page-width" id="albums" aria-labelledby="albums-title">
+      <div class="section-heading"><div><p class="eyebrow">ALBUMS ON REPEAT</p><h2 id="albums-title">POPULAR <span>ALBUMS</span></h2></div><a class="text-link" href="#albums">All albums <span>↗</span></a></div>
+      <div class="album-grid">
+        <article class="album-card"><a class="album-art" href="#player"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=650&q=85" alt="Night city lights representing After Hours"><span class="album-play">▶</span></a><div class="album-details"><h3>After Hours</h3><p>The Weeknd</p><div><span>2020 <i>·</i> Synth-pop</span><a href="#player">View Album ↗</a></div></div></article>
+        <article class="album-card"><a class="album-art" href="#player"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=650&q=85" alt="Colorful Divide album inspired artwork"><span class="album-play">▶</span></a><div class="album-details"><h3>÷ (Divide)</h3><p>Ed Sheeran</p><div><span>2017 <i>·</i> Pop</span><a href="#player">View Album ↗</a></div></div></article>
+        <article class="album-card"><a class="album-art" href="#player"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=650&q=85" alt="Harry's House live performance artwork"><span class="album-play">▶</span></a><div class="album-details"><h3>Harry's House</h3><p>Harry Styles</p><div><span>2022 <i>·</i> Pop</span><a href="#player">View Album ↗</a></div></div></article>
+        <article class="album-card"><a class="album-art" href="#player"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=650&q=85" alt="Evolve album inspired concert photo"><span class="album-play">▶</span></a><div class="album-details"><h3>Evolve</h3><p>Imagine Dragons</p><div><span>2017 <i>·</i> Alternative</span><a href="#player">View Album ↗</a></div></div></article>
+        <article class="album-card"><a class="album-art" href="#player"><img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=650&q=85" alt="Midnights album inspired stage lights"><span class="album-play">▶</span></a><div class="album-details"><h3>Midnights</h3><p>Taylor Swift</p><div><span>2022 <i>·</i> Pop</span><a href="#player">View Album ↗</a></div></div></article>
+        <article class="album-card"><a class="album-art" href="#player"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=650&q=85" alt="24K Magic inspired golden stage lights"><span class="album-play">▶</span></a><div class="album-details"><h3>24K Magic</h3><p>Bruno Mars</p><div><span>2016 <i>·</i> Funk-pop</span><a href="#player">View Album ↗</a></div></div></article>
+      </div>
+    </section>
+
+    <section class="section genre-section" id="genres" aria-labelledby="genres-title">
+      <div class="page-width">
+        <div class="section-heading"><div><p class="eyebrow">FOLLOW YOUR FEELING</p><h2 id="genres-title">EXPLORE BY <span>GENRE</span></h2></div><span class="section-aside">A sound for every side of you.</span></div>
+        <div class="genre-grid">
+          <a class="genre-card genre-pop" href="#trending"><span>01 / FEEL GOOD</span><b>Pop</b><i>↗</i></a>
+          <a class="genre-card genre-rock" href="#trending"><span>02 / TURN IT UP</span><b>Rock</b><i>↗</i></a>
+          <a class="genre-card genre-rap" href="#trending"><span>03 / SAY IT LOUD</span><b>Rap</b><i>↗</i></a>
+          <a class="genre-card genre-hiphop" href="#trending"><span>04 / FIND YOUR FLOW</span><b>Hip Hop</b><i>↗</i></a>
+          <a class="genre-card genre-edm" href="#trending"><span>05 / AFTER DARK</span><b>EDM</b><i>↗</i></a>
+          <a class="genre-card genre-rnb" href="#trending"><span>06 / SLOW IT DOWN</span><b>R&amp;B</b><i>↗</i></a>
+          <a class="genre-card genre-jazz" href="#trending"><span>07 / TAKE IT EASY</span><b>Jazz</b><i>↗</i></a>
+          <a class="genre-card genre-classical" href="#trending"><span>08 / FIND YOUR CALM</span><b>Classical</b><i>↗</i></a>
+          <a class="genre-card genre-kpop" href="#trending"><span>09 / GLOBAL BEAT</span><b>K-Pop</b><i>↗</i></a>
+          <a class="genre-card genre-lofi" href="#trending"><span>10 / TAKE A BREATH</span><b>Lo-Fi</b><i>↗</i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section page-width" id="playlists" aria-labelledby="playlists-title">
+      <div class="section-heading"><div><p class="eyebrow">HANDPICKED FOR YOUR MOMENT</p><h2 id="playlists-title">FEATURED <span>PLAYLISTS</span></h2></div><a class="text-link" href="#playlists">Browse playlists <span>↗</span></a></div>
+      <div class="playlist-grid">
+        <article class="playlist-card"><a href="#player" class="playlist-art"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=700&q=85" alt="Blue concert lights for Chill Vibes"><span class="playlist-play">▶</span></a><div class="playlist-info"><h3>Chill Vibes</h3><p>Unwind, slow down, and let the good sounds flow.</p><span>42 songs <i>·</i> 2 hr 38 min</span></div></article>
+        <article class="playlist-card"><a href="#player" class="playlist-art"><img src="https://images.unsplash.com/photo-1534258936925-c58bed479fcb?auto=format&fit=crop&w=700&q=85" alt="Energetic runner ready for a workout"><span class="playlist-play">▶</span></a><div class="playlist-info"><h3>Workout Music</h3><p>Big energy for every rep, run, and personal best.</p><span>36 songs <i>·</i> 2 hr 11 min</span></div></article>
+        <article class="playlist-card"><a href="#player" class="playlist-art"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=700&q=85" alt="Dreamy late-night city skyline"><span class="playlist-play">▶</span></a><div class="playlist-info"><h3>Late Night</h3><p>For quiet streets, open windows, and wandering thoughts.</p><span>51 songs <i>·</i> 3 hr 06 min</span></div></article>
+        <article class="playlist-card"><a href="#player" class="playlist-art"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=700&q=85" alt="Crowd celebrating together at a party"><span class="playlist-play">▶</span></a><div class="playlist-info"><h3>Party Hits</h3><p>Turn up the room with songs everyone knows.</p><span>48 songs <i>·</i> 2 hr 54 min</span></div></article>
+        <article class="playlist-card"><a href="#player" class="playlist-art"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=85" alt="Calm workspace for focused study"><span class="playlist-play">▶</span></a><div class="playlist-info"><h3>Focus &amp; Study</h3><p>Find your flow with soft sounds and fewer distractions.</p><span>55 songs <i>·</i> 3 hr 42 min</span></div></article>
+        <article class="playlist-card"><a href="#player" class="playlist-art"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=700&q=85" alt="Romantic warm lights at a live music show"><span class="playlist-play">▶</span></a><div class="playlist-info"><h3>Love Songs</h3><p>Every kind of love, told through a perfect song.</p><span>40 songs <i>·</i> 2 hr 47 min</span></div></article>
+      </div>
+    </section>
+
+    <section class="section charts-section" id="charts" aria-labelledby="charts-title">
+      <div class="page-width">
+        <div class="section-heading"><div><p class="eyebrow">THE WORLD, ON REPEAT</p><h2 id="charts-title">TOP MUSIC <span>CHARTS</span></h2></div><span class="chart-update"><i></i> UPDATED TODAY</span></div>
+        <div class="table-wrap">
+          <table class="chart-table">
+            <thead><tr><th>RANK</th><th>SONG</th><th>ARTIST</th><th>ALBUM</th><th>RELEASE</th><th>RATING</th></tr></thead>
+            <tbody>
+              <tr class="chart-first"><td><span class="chart-rank">01</span></td><td><span class="table-song"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=100&q=75" alt=""><b>Blinding Lights</b></span></td><td>The Weeknd</td><td>After Hours</td><td>2019</td><td><span class="rating">★ 98</span></td></tr>
+              <tr><td><span class="chart-rank">02</span></td><td><span class="table-song"><img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=100&q=75" alt=""><b>Shape of You</b></span></td><td>Ed Sheeran</td><td>÷ (Divide)</td><td>2017</td><td>96</td></tr>
+              <tr><td><span class="chart-rank">03</span></td><td><span class="table-song"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=100&q=75" alt=""><b>As It Was</b></span></td><td>Harry Styles</td><td>Harry's House</td><td>2022</td><td>95</td></tr>
+              <tr><td><span class="chart-rank">04</span></td><td><span class="table-song"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=100&q=75" alt=""><b>Believer</b></span></td><td>Imagine Dragons</td><td>Evolve</td><td>2017</td><td>93</td></tr>
+              <tr><td><span class="chart-rank">05</span></td><td><span class="table-song"><img src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=100&q=75" alt=""><b>Anti-Hero</b></span></td><td>Taylor Swift</td><td>Midnights</td><td>2022</td><td>92</td></tr>
+              <tr><td><span class="chart-rank">06</span></td><td><span class="table-song"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=100&q=75" alt=""><b>That's What I Like</b></span></td><td>Bruno Mars</td><td>24K Magic</td><td>2016</td><td>91</td></tr>
+              <tr><td><span class="chart-rank">07</span></td><td><span class="table-song"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=100&q=75" alt=""><b>Starboy</b></span></td><td>The Weeknd</td><td>Starboy</td><td>2016</td><td>90</td></tr>
+              <tr><td><span class="chart-rank">08</span></td><td><span class="table-song"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=75" alt=""><b>Happier Than Ever</b></span></td><td>Billie Eilish</td><td>Happier Than Ever</td><td>2021</td><td>89</td></tr>
+              <tr><td><span class="chart-rank">09</span></td><td><span class="table-song"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=100&q=75" alt=""><b>Watermelon Sugar</b></span></td><td>Harry Styles</td><td>Fine Line</td><td>2019</td><td>88</td></tr>
+              <tr><td><span class="chart-rank">10</span></td><td><span class="table-song"><img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=100&q=75" alt=""><b>Perfect</b></span></td><td>Ed Sheeran</td><td>÷ (Divide)</td><td>2017</td><td>87</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
 
     <section class="section page-width" id="news" aria-labelledby="news-title">
-      <div class="section-heading"><div><p class="eyebrow">THE LATEST FROM THE GAMEVERSE</p><h2 id="news-title">LATEST GAMING <span>NEWS</span></h2></div><a class="text-link" href="#news">All stories <span>↗</span></a></div>
+      <div class="section-heading"><div><p class="eyebrow">FROM THE MUSIC WORLD</p><h2 id="news-title">LATEST MUSIC <span>NEWS</span></h2></div><a class="text-link" href="#news">More stories <span>↗</span></a></div>
       <div class="news-grid">
-        <article class="news-card news-feature">
-          <a class="news-image" href="#news"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1000&q=85" alt="Esports arena ready for a major tournament"><span class="news-category">ESPORTS</span></a>
-          <div class="news-copy"><p class="news-date">OCT 06, 2026 <span>·</span> 5 MIN READ</p><h3>Champions clash as the global esports season reaches its peak</h3><p>The world's best teams are gearing up for the biggest showdown of the year. Here's everything you need to know before the opening match.</p><a class="text-link" href="#esports">Read More <span>→</span></a></div>
-        </article>
-        <article class="news-card">
-          <a class="news-image" href="#news"><img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=85" alt="Immersive fantasy gaming world"><span class="news-category">NEW RELEASE</span></a>
-          <div class="news-copy"><p class="news-date">OCT 03, 2026 <span>·</span> 3 MIN READ</p><h3>Five new worlds worth getting lost in this month</h3><a class="text-link" href="#games">Read More <span>→</span></a></div>
-        </article>
-        <article class="news-card">
-          <a class="news-image" href="#news"><img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=800&q=85" alt="Gaming PC setup glowing in a dark room"><span class="news-category">HARDWARE</span></a>
-          <div class="news-copy"><p class="news-date">SEP 29, 2026 <span>·</span> 4 MIN READ</p><h3>Build your ultimate battlestation: where to start</h3><a class="text-link" href="#setup">Read More <span>→</span></a></div>
-        </article>
-        <article class="news-card">
-          <a class="news-image" href="#news"><img src="https://images.unsplash.com/photo-1603481546238-487240415921?auto=format&fit=crop&w=800&q=85" alt="Game art in deep blue and purple colors"><span class="news-category">INDUSTRY</span></a>
-          <div class="news-copy"><p class="news-date">SEP 25, 2026 <span>·</span> 6 MIN READ</p><h3>Indie studios are changing the way we play together</h3><a class="text-link" href="#community">Read More <span>→</span></a></div>
-        </article>
+        <article class="news-card"><a class="news-image" href="#news"><img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=750&q=85" alt="Artists performing at a packed summer festival"><span>LIVE MUSIC</span></a><div class="news-info"><p class="news-date">OCT 05, 2026 <i>·</i> 5 MIN READ</p><h3>Festival season returns with a lineup made for the ages</h3><p>From intimate sets to huge headline moments, this year's live calendar is full of surprises.</p><a href="#news" class="text-link">Read More <span>→</span></a></div></article>
+        <article class="news-card"><a class="news-image" href="#news"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=750&q=85" alt="Singer in a dramatic spotlight"><span>NEW RELEASES</span></a><div class="news-info"><p class="news-date">OCT 02, 2026 <i>·</i> 4 MIN READ</p><h3>The new voices bringing a fresh sound to pop</h3><p>Meet the independent artists creating a wave of their own across the global charts.</p><a href="#news" class="text-link">Read More <span>→</span></a></div></article>
+        <article class="news-card"><a class="news-image" href="#news"><img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=750&q=85" alt="Mixing console inside a recording studio"><span>IN THE STUDIO</span></a><div class="news-info"><p class="news-date">SEP 28, 2026 <i>·</i> 6 MIN READ</p><h3>Inside the studio: how a hit song finds its rhythm</h3><p>Producers share the happy accidents and creative choices behind a record that sticks.</p><a href="#news" class="text-link">Read More <span>→</span></a></div></article>
+        <article class="news-card"><a class="news-image" href="#news"><img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=750&q=85" alt="Concert crowd lit with brilliant stage lights"><span>CULTURE</span></a><div class="news-info"><p class="news-date">SEP 24, 2026 <i>·</i> 3 MIN READ</p><h3>Why listening together still feels like magic</h3><p>Shared songs turn ordinary moments into memories that last far beyond the final note.</p><a href="#news" class="text-link">Read More <span>→</span></a></div></article>
       </div>
     </section>
 
-    <section class="section esports-section" id="esports" aria-labelledby="esports-title">
+    <section class="join-section" id="join" aria-labelledby="join-title">
+      <div class="join-glow" aria-hidden="true"></div>
+      <div class="page-width join-inner"><div><p class="eyebrow">GOOD MUSIC. RIGHT IN YOUR INBOX.</p><h2 id="join-title">JOIN <span>MUSICWAVE</span></h2><p>Stay updated with the latest music, artists and playlists.</p></div>
+        <div class="subscribe-form"><label class="visually-hidden" for="subscribe-email">Email Address</label><input id="subscribe-email" name="email" type="email" placeholder="Email Address"><button class="button button-primary" type="button">Subscribe <span aria-hidden="true">↗</span></button></div>
+      </div>
+    </section>
+
+    <section class="section accounts-section" id="about" aria-labelledby="account-title">
       <div class="page-width">
-        <div class="section-heading"><div><p class="eyebrow">THE ARENA IS WAITING</p><h2 id="esports-title">ENTER THE <span>ESPORTS</span></h2></div><a class="text-link" href="#tournaments">All tournaments <span>↗</span></a></div>
-        <article class="live-event">
-          <div class="live-event-art"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=85" alt="Packed esports stadium"><span class="live-label"><i></i> LIVE NOW</span></div>
-          <div class="live-event-info"><p class="eyebrow">VALORANT CHAMPIONS TOUR</p><h3>GLOBAL FINALS <span>2026</span></h3><div class="matchup"><span>TEAM PHOENIX</span><b>VS</b><span>NEON STRIKE</span></div><div class="event-detail"><span>◷ &nbsp; Oct 07 · 19:30 UTC</span><span>◉ &nbsp; 48.2K watching</span></div><a class="button button-primary" href="#tournaments">Watch tournament <span>↗</span></a></div>
-        </article>
-        <div class="tournament-list" id="tournaments">
-          <article class="tournament-row"><span class="tournament-game game-valorant">V</span><div class="tournament-name"><b>VCT Pacific — Playoffs</b><small>VALORANT · Paper Rex vs DRX</small></div><span class="tournament-date">OCT 11, 2026 <small>09:00 UTC</small></span><span class="status status-upcoming">UPCOMING</span><a class="arrow-link" href="#tournaments" aria-label="View VCT Pacific tournament">↗</a></article>
-          <article class="tournament-row"><span class="tournament-game game-cs">CS</span><div class="tournament-name"><b>Blast Premier: Fall Final</b><small>COUNTER-STRIKE 2 · 16 teams</small></div><span class="tournament-date">OCT 14, 2026 <small>14:00 UTC</small></span><span class="status status-upcoming">UPCOMING</span><a class="arrow-link" href="#tournaments" aria-label="View Blast Premier tournament">↗</a></article>
-          <article class="tournament-row"><span class="tournament-game game-lol">LoL</span><div class="tournament-name"><b>World Championship — Finals</b><small>LEAGUE OF LEGENDS · Grand final</small></div><span class="tournament-date">SEP 28, 2026 <small>FINISHED</small></span><span class="status status-finished">FINISHED</span><a class="arrow-link" href="#tournaments" aria-label="View League of Legends tournament">↗</a></article>
+        <div class="section-heading"><div><p class="eyebrow">YOUR MUSIC, YOUR SPACE</p><h2 id="account-title">BECOME A <span>MEMBER</span></h2></div><span class="section-aside">A home for every kind of listener.</span></div>
+        <div class="account-grid">
+          <article class="account-card" id="login">
+            <div class="account-heading"><span class="account-icon">↗</span><p class="eyebrow">WELCOME BACK</p><h3>Log in</h3><p>Pick up right where your music left off.</p></div>
+            <div class="account-form">
+              <label for="login-email">Email</label><input id="login-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+              <label for="login-password">Password</label><input id="login-password" name="password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+              <div class="form-options"><label class="remember"><input type="checkbox" name="remember"> Remember me</label><a href="#login">Forgot password?</a></div>
+              <button class="button button-primary account-submit" type="button">Login <span aria-hidden="true">→</span></button>
+            </div>
+            <p class="form-note">Demo interface only — no account is created.</p>
+          </article>
+          <article class="account-card register-card" id="register">
+            <div class="account-heading"><span class="account-icon">♫</span><p class="eyebrow">JOIN THE WAVE</p><h3>Create your account</h3><p>Your next favorite song is waiting.</p></div>
+            <div class="account-form">
+              <label for="register-name">Full Name</label><input id="register-name" name="name" type="text" placeholder="Your name" autocomplete="name" required>
+              <label for="register-email">Email</label><input id="register-email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+              <label for="register-password">Password</label><input id="register-password" name="password" type="password" placeholder="Create a password" autocomplete="new-password" required>
+              <label for="confirm-password">Confirm Password</label><input id="confirm-password" name="confirm-password" type="password" placeholder="Enter your password again" autocomplete="new-password" required>
+              <button class="button button-primary account-submit" type="button">Create Account <span aria-hidden="true">→</span></button>
+            </div>
+            <p class="form-note">Demo interface only — form submissions are not stored.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section page-width" aria-labelledby="players-title">
-      <div class="section-heading"><div><p class="eyebrow">THE ONES TO WATCH</p><h2 id="players-title">TOP <span>PLAYERS</span></h2></div><span class="muted">Season 08 · Updated today</span></div>
-      <div class="table-wrap">
-        <table class="leaderboard">
-          <thead><tr><th>RANK</th><th>PLAYER</th><th>GAME</th><th>WINS</th><th>K/D</th><th>RATING</th></tr></thead>
-          <tbody>
-            <tr class="rank-first"><td><span class="rank rank-gold">01</span></td><td><span class="player-avatar avatar-one">A</span><span class="player-name">AstraNova<small>🇰🇷 &nbsp; Seoul, KR</small></span></td><td><span class="player-game">VALORANT</span></td><td>284</td><td>2.84</td><td><span class="player-rating">3,892 <i>▲</i></span></td></tr>
-            <tr><td><span class="rank">02</span></td><td><span class="player-avatar avatar-two">K</span><span class="player-name">K1ngSlayer<small>🇺🇸 &nbsp; Los Angeles, US</small></span></td><td><span class="player-game">CS2</span></td><td>267</td><td>2.62</td><td>3,748</td></tr>
-            <tr><td><span class="rank">03</span></td><td><span class="player-avatar avatar-three">L</span><span class="player-name">LunaVex<small>🇧🇷 &nbsp; São Paulo, BR</small></span></td><td><span class="player-game">LEAGUE OF LEGENDS</span></td><td>251</td><td>2.41</td><td>3,621</td></tr>
-            <tr><td><span class="rank">04</span></td><td><span class="player-avatar avatar-four">D</span><span class="player-name">DarkMatter<small>🇯🇵 &nbsp; Tokyo, JP</small></span></td><td><span class="player-game">VALORANT</span></td><td>238</td><td>2.28</td><td>3,506</td></tr>
-            <tr><td><span class="rank">05</span></td><td><span class="player-avatar avatar-five">Z</span><span class="player-name">ZeroGravity<small>🇩🇪 &nbsp; Berlin, DE</small></span></td><td><span class="player-game">CS2</span></td><td>219</td><td>2.16</td><td>3,384</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <section class="community-section section" id="community" aria-labelledby="community-title">
-      <div class="page-width community-layout">
-        <div class="community-intro"><p class="eyebrow">MORE THAN A GAME</p><h2 id="community-title">FIND YOUR<br><span>PEOPLE.</span></h2><p>Squad up, share your wins, and make your mark. Your next teammate is already here.</p><a class="button button-primary" href="#account">Join Community <span>↗</span></a></div>
-        <div class="community-content">
-          <div class="community-stats"><div><b>2.4M<span>+</span></b><small>MEMBERS</small></div><div><b>18.6K</b><small>PLAYERS ONLINE</small></div><div><b>86K</b><small>POSTS THIS WEEK</small></div><div><b>12.8K</b><small>ACTIVE CLANS</small></div></div>
-          <div class="clan-heading"><h3>COMMUNITY SPOTLIGHT</h3><a class="text-link" href="#account">Browse clans <span>→</span></a></div>
-          <div class="clan-grid">
-            <article class="clan-card"><div class="clan-banner clan-banner-purple"><span>🌙</span><small>OPEN CLAN</small></div><div class="clan-info"><h4>Midnight Raiders</h4><p>Casual · RPG · Since 2021</p><div><span>◉ 4.2K members</span><a href="#account" aria-label="View Midnight Raiders clan">↗</a></div></div></article>
-            <article class="clan-card"><div class="clan-banner clan-banner-blue"><span>⚡</span><small>RECRUITING</small></div><div class="clan-info"><h4>Neon Vanguard</h4><p>Competitive · FPS · Since 2019</p><div><span>◉ 2.8K members</span><a href="#account" aria-label="View Neon Vanguard clan">↗</a></div></div></article>
-            <article class="clan-card"><div class="clan-banner clan-banner-red"><span>🔥</span><small>OPEN CLAN</small></div><div class="clan-info"><h4>Dragon's Ascent</h4><p>Social · All games · Since 2023</p><div><span>◉ 1.6K members</span><a href="#account" aria-label="View Dragon's Ascent clan">↗</a></div></div></article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section page-width setup-section" id="setup" aria-labelledby="setup-title">
-      <div class="section-heading"><div><p class="eyebrow">GEAR UP. GAME ON.</p><h2 id="setup-title">ULTIMATE GAMING <span>SETUP</span></h2></div><a class="text-link" href="#setup">Explore gear <span>↗</span></a></div>
-      <div class="setup-grid">
-        <article class="setup-card"><a href="#setup" class="setup-image"><img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=700&q=85" alt="High performance gaming desktop PC"></a><div class="setup-info"><span class="setup-type">DESKTOP</span><h3>Phantom X Gaming PC</h3><div><span class="rating">★ 4.9</span><b>$2,499</b></div><a class="setup-link" href="#setup">View Setup <span>↗</span></a></div></article>
-        <article class="setup-card"><a href="#setup" class="setup-image"><img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=700&q=85" alt="Modern gaming laptop on a desk"></a><div class="setup-info"><span class="setup-type">LAPTOP</span><h3>Nova 16 Pro Laptop</h3><div><span class="rating">★ 4.8</span><b>$1,899</b></div><a class="setup-link" href="#setup">View Setup <span>↗</span></a></div></article>
-        <article class="setup-card"><a href="#setup" class="setup-image"><img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=700&q=85" alt="Ultrawide gaming monitor"></a><div class="setup-info"><span class="setup-type">MONITOR</span><h3>Vortex UltraWide 34"</h3><div><span class="rating">★ 4.7</span><b>$799</b></div><a class="setup-link" href="#setup">View Setup <span>↗</span></a></div></article>
-        <article class="setup-card"><a href="#setup" class="setup-image"><img src="https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=700&q=85" alt="Mechanical gaming keyboard with RGB lights"></a><div class="setup-info"><span class="setup-type">KEYBOARD</span><h3>Pulse RGB Mechanical</h3><div><span class="rating">★ 4.8</span><b>$169</b></div><a class="setup-link" href="#setup">View Setup <span>↗</span></a></div></article>
-        <article class="setup-card"><a href="#setup" class="setup-image"><img src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=700&q=85" alt="Precision gaming mouse"></a><div class="setup-info"><span class="setup-type">MOUSE</span><h3>Phantom Pro Wireless</h3><div><span class="rating">★ 4.9</span><b>$119</b></div><a class="setup-link" href="#setup">View Setup <span>↗</span></a></div></article>
-        <article class="setup-card"><a href="#setup" class="setup-image"><img src="https://images.unsplash.com/photo-1599669454699-248893623440?auto=format&fit=crop&w=700&q=85" alt="Over-ear gaming headset"></a><div class="setup-info"><span class="setup-type">HEADSET</span><h3>Echo Surround Wireless</h3><div><span class="rating">★ 4.7</span><b>$229</b></div><a class="setup-link" href="#setup">View Setup <span>↗</span></a></div></article>
-      </div>
-    </section>
-
-    <section class="faq-section section" id="faq" aria-labelledby="faq-title">
+    <section class="section faq-section" aria-labelledby="faq-title">
       <div class="page-width faq-layout">
-        <div><p class="eyebrow">NEED A HAND?</p><h2 id="faq-title">GOOD TO<br><span>KNOW.</span></h2><p class="muted">The quick answers to your most common questions.</p><a class="text-link" href="mailto:support@gamezone.example">Still have questions? Contact us <span>↗</span></a></div>
+        <div class="faq-intro"><p class="eyebrow">FREQUENTLY ASKED QUESTIONS</p><h2 id="faq-title">GOOD TO<br><span>KNOW.</span></h2><p>Everything you need to know about your new music home.</p><a class="text-link" href="#join">Still curious? Get in touch <span>↗</span></a></div>
         <div class="faq-list">
-          <details open><summary>What is GAMEZONE?<span>+</span></summary><p>GAMEZONE is a gaming hub for discovering games, following esports, exploring gear, and connecting with players and clans.</p></details>
-          <details><summary>How do I join the community?<span>+</span></summary><p>This static demo does not create accounts or save details. On a live GAMEZONE, you would register first, then find a clan or join community conversations.</p></details>
-          <details><summary>How can I enter a tournament?<span>+</span></summary><p>Visit the Esports section to explore listed events. Tournament entries and registrations are examples only and are not submitted to a live service.</p></details>
-          <details><summary>Is GAMEZONE free to use?<span>+</span></summary><p>This demo website is free to browse. Any game or hardware prices shown are sample content and purchases are not processed here.</p></details>
+          <details><summary>What is MUSICWAVE?<span>+</span></summary><p>MUSICWAVE is a music discovery concept that brings songs, artists, albums, playlists, charts, and music stories together in one place.</p></details>
+          <details><summary>Can I listen to music for free?<span>+</span></summary><p>This website is a static HTML and CSS demo. It showcases music discovery and a player interface, but it does not stream or play audio.</p></details>
+          <details><summary>How do I find a song?<span>+</span></summary><p>Use the search field near the top of the page, or browse trending songs, artists, albums, charts, and genres.</p></details>
+          <details><summary>How do I create a playlist?<span>+</span></summary><p>Playlist creation is not connected in this front-end demo. Explore the featured playlists to see how playlist cards are presented.</p></details>
+          <details><summary>Can I use MUSICWAVE on my phone?<span>+</span></summary><p>Yes. The layout adapts to phone, tablet, laptop, and desktop screens using CSS media queries.</p></details>
         </div>
-      </div>
-    </section>
-
-    <section class="account-section section page-width" id="account" aria-labelledby="account-title">
-      <div class="account-heading"><p class="eyebrow">YOUR SQUAD IS WAITING</p><h2 id="account-title">READY TO <span>LEVEL UP?</span></h2><p>Sign in or create your GAMEZONE account. Forms are for display only and do not submit credentials.</p></div>
-      <div class="account-grid">
-        <article class="account-card">
-          <div class="account-card-heading"><div><p class="eyebrow">WELCOME BACK</p><h3>Log in</h3></div><span class="account-symbol">↗</span></div>
-          <div class="account-form">
-            <label for="login-email">Username or email</label><input id="login-email" name="login-email" type="text" placeholder="Your username or email" autocomplete="username">
-            <label for="login-password">Password</label><input id="login-password" name="login-password" type="password" placeholder="Enter your password" autocomplete="current-password">
-            <div class="form-options"><label class="remember"><input type="checkbox" name="remember"> <span>Remember me</span></label><a href="#faq">Forgot password?</a></div>
-            <button class="button button-primary account-submit" type="button">Log In <span>→</span></button>
-          </div>
-          <p class="form-note">Demo form only — authentication is not enabled.</p>
-        </article>
-        <article class="account-card register-card">
-          <div class="account-card-heading"><div><p class="eyebrow">NEW HERE?</p><h3>Join the game</h3></div><span class="account-symbol">✦</span></div>
-          <p class="register-copy">Make your profile, meet your squad, and keep every game in your orbit.</p>
-          <div class="account-form">
-            <label for="register-email">Email address</label><input id="register-email" name="register-email" type="email" placeholder="you@example.com" autocomplete="email">
-            <label for="register-username">Choose a username</label><input id="register-username" name="register-username" type="text" placeholder="Your gamer tag" autocomplete="username">
-            <button class="button button-outline account-submit" type="button">Create Account <span>→</span></button>
-          </div>
-          <p class="form-note">Registration is a visual mockup; no data is saved.</p>
-        </article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="footer-main page-width">
-      <div class="footer-about"><a class="brand" href="#home"><span class="brand-mark">G</span><span>GAME<span class="accent">ZONE</span></span></a><p>Enter the Game. Become the Legend. Your home for games, esports, gear, and the people who play.</p><div class="social-links"><a href="#community" aria-label="Discord community">DS</a><a href="#community" aria-label="Instagram">IG</a><a href="#community" aria-label="YouTube">YT</a><a href="#community" aria-label="X social">X</a></div></div>
-      <div class="footer-column"><h3>EXPLORE</h3><a href="#games">Games</a><a href="#news">Latest News</a><a href="#esports">Esports</a><a href="#tournaments">Tournaments</a></div>
-      <div class="footer-column"><h3>COMMUNITY</h3><a href="#community">Find a Clan</a><a href="#community">Top Players</a><a href="#community">Community Hub</a><a href="#account">Join GAMEZONE</a></div>
-      <div class="footer-column"><h3>SUPPORT</h3><a href="#faq">Help Center</a><a href="#faq">FAQ</a><a href="mailto:support@gamezone.example">Contact Us</a><a href="#faq">Privacy &amp; Terms</a></div>
-      <div class="footer-newsletter"><h3>GET IN THE GAME</h3><p>News, drops, and updates. No spam, just the good stuff.</p><div class="newsletter-form"><label class="visually-hidden" for="newsletter-email">Email address</label><input type="email" id="newsletter-email" name="newsletter-email" placeholder="Your email address"><button type="button" aria-label="Subscribe">→</button></div><small>Newsletter form is a demo and does not subscribe.</small></div>
+    <div class="page-width footer-main">
+      <div class="footer-about"><a class="brand" href="#home"><span class="brand-icon" aria-hidden="true">♫</span><span>MUSIC<span>WAVE</span></span></a><p>Discover the music that moves you. Find new favorites and keep your world in rhythm.</p><div class="social-links" aria-label="Social links"><a href="#join" aria-label="Instagram">IG</a><a href="#join" aria-label="TikTok">TK</a><a href="#join" aria-label="YouTube">YT</a></div></div>
+      <nav class="footer-column" aria-label="Explore"><h3>EXPLORE</h3><a href="#trending">Trending</a><a href="#artists">Artists</a><a href="#albums">Albums</a><a href="#genres">Genres</a></nav>
+      <nav class="footer-column" aria-label="Discover"><h3>DISCOVER</h3><a href="#playlists">Playlists</a><a href="#charts">Top Charts</a><a href="#news">Music News</a><a href="#join">About Us</a></nav>
+      <div class="footer-note"><h3>MADE FOR MUSIC LOVERS</h3><p>Made with a little rhythm and a lot of love.</p><a href="#home">Back to top ↑</a></div>
     </div>
-    <div class="footer-bottom page-width"><span>© 2026 GAMEZONE. ALL RIGHTS RESERVED.</span><span>BUILT FOR THE LOVE OF THE GAME <b>♥</b></span><a href="#home">BACK TO TOP ↑</a></div>
+    <div class="page-width footer-bottom"><span>© 2026 MUSICWAVE. ALL RIGHTS RESERVED.</span><span>DESIGNED FOR THE LOVE OF MUSIC <b>♫</b></span></div>
   </footer>
+
+  <aside class="music-player" id="player" aria-label="Music player demo">
+    <div class="player-track"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=160&q=75" alt="Album artwork for Blinding Lights"><div><b>Blinding Lights</b><span>The Weeknd</span></div><a href="#player" class="player-like" aria-label="Like this song">♡</a></div>
+    <div class="player-controls"><div class="control-buttons"><button type="button" aria-label="Previous track">|◀</button><button class="control-play" type="button" aria-label="Play or pause">▶</button><button type="button" aria-label="Next track">▶|</button></div><div class="progress-row"><span>1:24</span><div class="progress-track" role="img" aria-label="Demo progress: 42 percent"><span></span></div><span>3:20</span></div></div>
+    <div class="player-volume"><span aria-hidden="true">♫</span><span class="volume-track" role="img" aria-label="Demo volume: 70 percent"><i></i></span><span class="player-demo">PLAYER DEMO</span></div>
+  </aside>
 </body>
 </html>
