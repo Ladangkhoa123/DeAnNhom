@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GAMEZONE — discover games, follow esports, meet your squad, and level up your gaming life.">
+  <title>GAMEZONE — Enter the Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page-transition" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#home" aria-label="GAMEZONE home"><span class="brand-mark">G</span><span>GAME<span class="accent">ZONE</span></span></a>
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Toggle navigation">
+      <label class="menu-button" for="nav-toggle" aria-label="Open navigation"><span></span><span></span><span></span></label>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#games">Games</a>
+        <a href="#news">News</a>
+        <a href="#esports">Esports</a>
+        <a href="#community">Community</a>
+        <a href="#tournaments">Tournaments</a>
+      </nav>
+      <div class="header-actions">
+        <a class="login-link" href="#account">Log in</a>
+        <a class="button button-small button-primary" href="#games">Play Now <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-backdrop"></div>
+      <div class="hero-content page-width">
+        <p class="eyebrow"><span class="live-dot"></span> YOUR NEXT ADVENTURE STARTS HERE</p>
+        <p class="hero-kicker">FEATURED GAME <span> / 01</span></p>
+        <h1 id="hero-title">BLACK MYTH<br><span>WUKONG</span></h1>
+        <p class="hero-copy">Destined for greatness. Become the Monkey King in a breathtaking action RPG inspired by Chinese mythology.</p>
+        <div class="hero-meta">
+          <span class="tag">ACTION RPG</span><span class="meta-rating"><span class="star">★</span> 9.4 <small>/ 10</small></span><span class="meta-divider"></span><span>PC · PS5</span>
+        </div>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#games">Play Now <span aria-hidden="true">↗</span></a>
+          <a class="button button-outline" href="#featured-story">View Details <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="hero-pagination"><span class="pagination-active"></span><span></span><span></span><span></span><small>01 <i>/</i> 04</small></div>
+      </div>
+      <a class="hero-scroll" href="#games"><span></span> SCROLL TO EXPLORE</a>
+    </section>
+
+    <section class="search-strip page-width" aria-label="Search games">
+      <div><span class="eyebrow">FIND YOUR NEXT FAVORITE</span><p>What are you playing today?</p></div>
+      <form class="search-form" action="#games" method="get">
+        <label class="visually-hidden" for="game-search">Search games</label>
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input id="game-search" name="q" type="search" placeholder="Search games...">
+        <button class="button button-primary" type="submit">Search <span aria-hidden="true">→</span></button>
+      </form>
+    </section>
+
+    <section class="section page-width" id="games" aria-labelledby="games-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">PICK YOUR NEXT QUEST</p><h2 id="games-title">FEATURED <span>GAMES</span></h2></div>
+        <a class="text-link" href="#categories">Explore all games <span>↗</span></a>
+      </div>
+      <div class="game-grid">
+        <article class="game-card" id="featured-story">
+          <a class="game-image" href="#featured-story" aria-label="View Black Myth: Wukong"><img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=85" alt="Fantasy game world with atmospheric lighting"><span class="image-badge">HOT</span><span class="image-overlay"></span><span class="card-play">View Game <b>↗</b></span></a>
+          <div class="game-info"><div><h3>Black Myth: Wukong</h3><p>Action RPG <span>·</span> PC, PS5</p></div><span class="rating">★ 9.4</span></div>
+          <div class="game-foot"><span><i class="online-dot"></i> 128K playing</span><span class="game-platform">PC / PS5</span></div>
+        </article>
+        <article class="game-card">
+          <a class="game-image" href="#esports" aria-label="View Valorant"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=85" alt="Competitive gaming arena lit with vivid colors"><span class="image-overlay"></span><span class="card-play">View Game <b>↗</b></span></a>
+          <div class="game-info"><div><h3>VALORANT</h3><p>Tactical FPS <span>·</span> PC</p></div><span class="rating">★ 8.8</span></div>
+          <div class="game-foot"><span><i class="online-dot"></i> 92K playing</span><span class="game-platform">PC</span></div>
+        </article>
+        <article class="game-card">
+          <a class="game-image" href="#esports" aria-label="View Counter-Strike 2"><img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&fit=crop&w=800&q=85" alt="Player at a PC in a neon-lit gaming room"><span class="image-overlay"></span><span class="card-play">View Game <b>↗</b></span></a>
+          <div class="game-info"><div><h3>Counter-Strike 2</h3><p>Competitive FPS <span>·</span> PC</p></div><span class="rating">★ 8.7</span></div>
+          <div class="game-foot"><span><i class="online-dot"></i> 76K playing</span><span class="game-platform">PC</span></div>
+        </article>
+        <article class="game-card">
+          <a class="game-image" href="#featured-story" aria-label="View Elden Ring"><img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=85" alt="Ancient fantasy landscape beneath a dramatic sky"><span class="image-overlay"></span><span class="card-play">View Game <b>↗</b></span></a>
+          <div class="game-info"><div><h3>ELDEN RING</h3><p>Soulslike RPG <span>·</span> PC, Console</p></div><span class="rating">★ 9.6</span></div>
+          <div class="game-foot"><span><i class="online-dot"></i> 54K playing</span><span class="game-platform">PC / PS / Xbox</span></div>
+        </article>
+        <article class="game-card">
+          <a class="game-image" href="#esports" aria-label="View League of Legends"><img src="https://images.unsplash.com/photo-1603481546238-487240415921?auto=format&fit=crop&w=800&q=85" alt="Fantasy inspired gaming scene"><span class="image-overlay"></span><span class="card-play">View Game <b>↗</b></span></a>
+          <div class="game-info"><div><h3>League of Legends</h3><p>MOBA <span>·</span> PC</p></div><span class="rating">★ 8.9</span></div>
+          <div class="game-foot"><span><i class="online-dot"></i> 214K playing</span><span class="game-platform">PC</span></div>
+        </article>
+        <article class="game-card">
+          <a class="game-image" href="#community" aria-label="View Minecraft"><img src="https://images.unsplash.com/photo-1607513746994-51f730a44832?auto=format&fit=crop&w=800&q=85" alt="Colorful block-inspired game landscape"><span class="image-overlay"></span><span class="card-play">View Game <b>↗</b></span></a>
+          <div class="game-info"><div><h3>Minecraft</h3><p>Sandbox Survival <span>·</span> All platforms</p></div><span class="rating">★ 9.1</span></div>
+          <div class="game-foot"><span><i class="online-dot"></i> 187K playing</span><span class="game-platform">ALL PLATFORMS</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section category-section" id="categories" aria-labelledby="category-title">
+      <div class="page-width">
+        <div class="section-heading"><div><p class="eyebrow">WHAT'S YOUR PLAYSTYLE?</p><h2 id="category-title">GAME <span>CATEGORIES</span></h2></div><span class="muted">Find a world that feels like yours.</span></div>
+        <div class="category-grid">
+          <a class="category-card" href="#games"><span class="category-icon">⚔</span><span><b>Action</b><small>248 games</small></span><i>↗</i></a>
+          <a class="category-card" href="#games"><span class="category-icon">✧</span><span><b>RPG</b><small>186 games</small></span><i>↗</i></a>
+          <a class="category-card" href="#games"><span class="category-icon">⌖</span><span><b>FPS</b><small>132 games</small></span><i>↗</i></a>
+          <a class="category-card" href="#games"><span class="category-icon">♟</span><span><b>Strategy</b><small>97 games</small></span><i>↗</i></a>
+          <a class="category-card" href="#games"><span class="category-icon">➤</span><span><b>Adventure</b><small>163 games</small></span><i>↗</i></a>
+          <a class="category-card" href="#games"><span class="category-icon">⌂</span><span><b>Survival</b><small>84 games</small></span><i>↗</i></a>
+          <a class="category-card" href="#games"><span class="category-icon">◉</span><span><b>Sports</b><small>76 games</small></span><i>↗</i></a>
+          <a class="category-card" href="#games"><span class="category-icon">☠</span><span><b>Horror</b><small>59 games</small></span><i>↗</i></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section page-width" id="news" aria-labelledby="news-title">
+      <div class="section-heading"><div><p class="eyebrow">THE LATEST FROM THE GAMEVERSE</p><h2 id="news-title">LATEST GAMING <span>NEWS</span></h2></div><a class="text-link" href="#news">All stories <span>↗</span></a></div>
+      <div class="news-grid">
+        <article class="news-card news-feature">
+          <a class="news-image" href="#news"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1000&q=85" alt="Esports arena ready for a major tournament"><span class="news-category">ESPORTS</span></a>
+          <div class="news-copy"><p class="news-date">OCT 06, 2026 <span>·</span> 5 MIN READ</p><h3>Champions clash as the global esports season reaches its peak</h3><p>The world's best teams are gearing up for the biggest showdown of the year. Here's everything you need to know before the opening match.</p><a class="text-link" href="#esports">Read More <span>→</span></a></div>
+        </article>
+        <article class="news-card">
+          <a class="news-image" href="#news"><img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=85" alt="Immersive fantasy gaming world"><span class="news-category">NEW RELEASE</span></a>
+          <div class="news-copy"><p class="news-date">OCT 03, 2026 <span>·</span> 3 MIN READ</p><h3>Five new worlds worth getting lost in this month</h3><a class="text-link" href="#games">Read More <span>→</span></a></div>
+        </article>
+        <article class="news-card">
+          <a class="news-image" href="#news"><img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=800&q=85" alt="Gaming PC setup glowing in a dark room"><span class="news-category">HARDWARE</span></a>
+          <div class="news-copy"><p class="news-date">SEP 29, 2026 <span>·</span> 4 MIN READ</p><h3>Build your ultimate battlestation: where to start</h3><a class="text-link" href="#setup">Read More <span>→</span></a></div>
+        </article>
+        <article class="news-card">
+          <a class="news-image" href="#news"><img src="https://images.unsplash.com/photo-1603481546238-487240415921?auto=format&fit=crop&w=800&q=85" alt="Game art in deep blue and purple colors"><span class="news-category">INDUSTRY</span></a>
+          <div class="news-copy"><p class="news-date">SEP 25, 2026 <span>·</span> 6 MIN READ</p><h3>Indie studios are changing the way we play together</h3><a class="text-link" href="#community">Read More <span>→</span></a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section esports-section" id="esports" aria-labelledby="esports-title">
+      <div class="page-width">
+        <div class="section-heading"><div><p class="eyebrow">THE ARENA IS WAITING</p><h2 id="esports-title">ENTER THE <span>ESPORTS</span></h2></div><a class="text-link" href="#tournaments">All tournaments <span>↗</span></a></div>
+        <article class="live-event">
+          <div class="live-event-art"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=85" alt="Packed esports stadium"><span class="live-label"><i></i> LIVE NOW</span></div>
+          <div class="live-event-info"><p class="eyebrow">VALORANT CHAMPIONS TOUR</p><h3>GLOBAL FINALS <span>2026</span></h3><div class="matchup"><span>TEAM PHOENIX</span><b>VS</b><span>NEON STRIKE</span></div><div class="event-detail"><span>◷ &nbsp; Oct 07 · 19:30 UTC</span><span>◉ &nbsp; 48.2K watching</span></div><a class="button button-primary" href="#tournaments">Watch tournament <span>↗</span></a></div>
+        </article>
+        <div class="tournament-list" id="tournaments">
+          <article class="tournament-row"><span class="tournament-game game-valorant">V</span><div class="tournament-name"><b>VCT Pacific — Playoffs</b><small>VALORANT · Paper Rex vs DRX</small></div><span class="tournament-date">OCT 11, 2026 <small>09:00 UTC</small></span><span class="status status-upcoming">UPCOMING</span><a class="arrow-link" href="#tournaments" aria-label="View VCT Pacific tournament">↗</a></article>
+          <article class="tournament-row"><span class="tournament-game game-cs">CS</span><div class="tournament-name"><b>Blast Premier: Fall Final</b><small>COUNTER-STRIKE 2 · 16 teams</small></div><span class="tournament-date">OCT 14, 2026 <small>14:00 UTC</small></span><span class="status status-upcoming">UPCOMING</span><a class="arrow-link" href="#tournaments" aria-label="View Blast Premier tournament">↗</a></article>
+          <article class="tournament-row"><span class="tournament-game game-lol">LoL</span><div class="tournament-name"><b>World Championship — Finals</b><small>LEAGUE OF LEGENDS · Grand final</small></div><span class="tournament-date">SEP 28, 2026 <small>FINISHED</small></span><span class="status status-finished">FINISHED</span><a class="arrow-link" href="#tournaments" aria-label="View League of Legends tournament">↗</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section page-width" aria-labelledby="players-title">
+      <div class="section-heading"><div><p class="eyebrow">THE ONES TO WATCH</p><h2 id="players-title">TOP <span>PLAYERS</span></h2></div><span class="muted">Season 08 · Updated today</span></div>
+      <div class="table-wrap">
+        <table class="leaderboard">
+          <thead><tr><th>RANK</th><th>PLAYER</th><th>GAME</th><th>WINS</th><th>K/D</th><th>RATING</th></tr></thead>
+          <tbody>
+            <tr class="rank-first"><td><span class="rank rank-gold">01</span></td><td><span class="player-avatar avatar-one">A</span><span class="player-name">AstraNova<small>🇰🇷 &nbsp; Seoul, KR</small></span></td><td><span class="player-game">VALORANT</span></td><td>284</td><td>2.84</td><td><span class="player-rating">3,892 <i>▲</i></span></td></tr>
+            <tr><td><span class="rank">02</span></td><td><span class="player-avatar avatar-two">K</span><span class="player-name">K1ngSlayer<small>🇺🇸 &nbsp; Los Angeles, US</small></span></td><td><span class="player-game">CS2</span></td><td>267</td><td>2.62</td><td>3,748</td></tr>
+            <tr><td><span class="rank">03</span></td><td><span class="player-avatar avatar-three">L</span><span class="player-name">LunaVex<small>🇧🇷 &nbsp; São Paulo, BR</small></span></td><td><span class="player-game">LEAGUE OF LEGENDS</span></td><td>251</td><td>2.41</td><td>3,621</td></tr>
+            <tr><td><span class="rank">04</span></td><td><span class="player-avatar avatar-four">D</span><span class="player-name">DarkMatter<small>🇯🇵 &nbsp; Tokyo, JP</small></span></td><td><span class="player-game">VALORANT</span></td><td>238</td><td>2.28</td><td>3,506</td></tr>
+            <tr><td><span class="rank">05</span></td><td><span class="player-avatar avatar-five">Z</span><span class="player-name">ZeroGravity<small>🇩🇪 &nbsp; Berlin, DE</small></span></td><td><span class="player-game">CS2</span></td><td>219</td><td>2.16</td><td>3,384</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="community-section section" id="community" aria-labelledby="community-title">
+      <div class="page-width community-layout">
+        <div class="community-intro"><p class="eyebrow">MORE THAN A GAME</p><h2 id="community-title">FIND YOUR<br><span>PEOPLE.</span></h2><p>Squad up, share your wins, and make your mark. Your next teammate is already here.</p><a class="button button-primary" href="#account">Join Community <span>↗</span></a></div>
+        <div class="community-content">
+          <div class="community-stats"><div><b>2.4M<span>+</span></b><small>MEMBERS</small></div><div><b>18.6K</b><small>PLAYERS ONLINE</small></div><div><b>86K</b><small>POSTS THIS WEEK</small></div><div><b>12.8K</b><small>ACTIVE CLANS</small></div></div>
+          <div class="clan-heading"><h3>COMMUNITY SPOTLIGHT</h3><a class="text-link" href="#account">Browse clans <span>→</span></a></div>
+          <div class="clan-grid">
+            <article class="clan-card"><div class="clan-banner clan-banner-purple"><span>🌙</span><small>OPEN CLAN</small></div><div class="clan-info"><h4>Midnight Raiders</h4><p>Casual · RPG · Since 2021</p><div><span>◉ 4.2K members</span><a href="#account" aria-label="View Midnight Raiders clan">↗</a></div></div></article>
+            <article class="clan-card"><div class="clan-banner clan-banner-blue"><span>⚡</span><small>RECRUITING</small></div><div class="clan-info"><h4>Neon Vanguard</h4><p>Competitive · FPS · Since 2019</p><div><span>◉ 2.8K members</span><a href="#account" aria-label="View Neon Vanguard clan">↗</a></div></div></article>
+            <article class="clan-card"><div class="clan-banner clan-banner-red"><span>🔥</span><small>OPEN CLAN</small></div><div class="clan-info"><h4>Dragon's Ascent</h4><p>Social · All games · Since 2023</p><div><span>◉ 1.6K members</span><a href="#account" aria-label="View Dragon's Ascent clan">↗</a></div></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section page-width setup-section" id="setup" aria-labelledby="setup-title">
+      <div class="section-heading"><div><p class="eyebrow">GEAR UP. GAME ON.</p><h2 id="setup-title">ULTIMATE GAMING <span>SETUP</span></h2></div><a class="text-link" href="#setup">Explore gear <span>↗</span></a></div>
+      <div class="setup-grid">
+        <article class="setup-card"><a href="#setup" class="setup-image"><img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=700&q=85" alt="High performance gaming desktop PC"></a><div class="setup-info"><span class="setup-type">DESKTOP</span><h3>Phantom X Gaming PC</h3><div><span class="rating">★ 4.9</span><b>$2,499</b></div><a class="setup-link" href="#setup">View Setup <span>↗</span></a></div></article>
+        <article class="setup-card"><a href="#setup" class="setup-image"><img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=700&q=85" alt="Modern gaming laptop on a desk"></a><div class="setup-info"><span class="setup-type">LAPTOP</span><h3>Nova 16 Pro Laptop</h3><div><span class="rating">★ 4.8</span><b>$1,899</b></div><a class="setup-link" href="#setup">View Setup <span>↗</span></a></div></article>
+        <article class="setup-card"><a href="#setup" class="setup-image"><img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=700&q=85" alt="Ultrawide gaming monitor"></a><div class="setup-info"><span class="setup-type">MONITOR</span><h3>Vortex UltraWide 34"</h3><div><span class="rating">★ 4.7</span><b>$799</b></div><a class="setup-link" href="#setup">View Setup <span>↗</span></a></div></article>
+        <article class="setup-card"><a href="#setup" class="setup-image"><img src="https://images.unsplash.com/photo-1595225476474-87563907a212?auto=format&fit=crop&w=700&q=85" alt="Mechanical gaming keyboard with RGB lights"></a><div class="setup-info"><span class="setup-type">KEYBOARD</span><h3>Pulse RGB Mechanical</h3><div><span class="rating">★ 4.8</span><b>$169</b></div><a class="setup-link" href="#setup">View Setup <span>↗</span></a></div></article>
+        <article class="setup-card"><a href="#setup" class="setup-image"><img src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=700&q=85" alt="Precision gaming mouse"></a><div class="setup-info"><span class="setup-type">MOUSE</span><h3>Phantom Pro Wireless</h3><div><span class="rating">★ 4.9</span><b>$119</b></div><a class="setup-link" href="#setup">View Setup <span>↗</span></a></div></article>
+        <article class="setup-card"><a href="#setup" class="setup-image"><img src="https://images.unsplash.com/photo-1599669454699-248893623440?auto=format&fit=crop&w=700&q=85" alt="Over-ear gaming headset"></a><div class="setup-info"><span class="setup-type">HEADSET</span><h3>Echo Surround Wireless</h3><div><span class="rating">★ 4.7</span><b>$229</b></div><a class="setup-link" href="#setup">View Setup <span>↗</span></a></div></article>
+      </div>
+    </section>
+
+    <section class="faq-section section" id="faq" aria-labelledby="faq-title">
+      <div class="page-width faq-layout">
+        <div><p class="eyebrow">NEED A HAND?</p><h2 id="faq-title">GOOD TO<br><span>KNOW.</span></h2><p class="muted">The quick answers to your most common questions.</p><a class="text-link" href="mailto:support@gamezone.example">Still have questions? Contact us <span>↗</span></a></div>
+        <div class="faq-list">
+          <details open><summary>What is GAMEZONE?<span>+</span></summary><p>GAMEZONE is a gaming hub for discovering games, following esports, exploring gear, and connecting with players and clans.</p></details>
+          <details><summary>How do I join the community?<span>+</span></summary><p>This static demo does not create accounts or save details. On a live GAMEZONE, you would register first, then find a clan or join community conversations.</p></details>
+          <details><summary>How can I enter a tournament?<span>+</span></summary><p>Visit the Esports section to explore listed events. Tournament entries and registrations are examples only and are not submitted to a live service.</p></details>
+          <details><summary>Is GAMEZONE free to use?<span>+</span></summary><p>This demo website is free to browse. Any game or hardware prices shown are sample content and purchases are not processed here.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="account-section section page-width" id="account" aria-labelledby="account-title">
+      <div class="account-heading"><p class="eyebrow">YOUR SQUAD IS WAITING</p><h2 id="account-title">READY TO <span>LEVEL UP?</span></h2><p>Sign in or create your GAMEZONE account. Forms are for display only and do not submit credentials.</p></div>
+      <div class="account-grid">
+        <article class="account-card">
+          <div class="account-card-heading"><div><p class="eyebrow">WELCOME BACK</p><h3>Log in</h3></div><span class="account-symbol">↗</span></div>
+          <div class="account-form">
+            <label for="login-email">Username or email</label><input id="login-email" name="login-email" type="text" placeholder="Your username or email" autocomplete="username">
+            <label for="login-password">Password</label><input id="login-password" name="login-password" type="password" placeholder="Enter your password" autocomplete="current-password">
+            <div class="form-options"><label class="remember"><input type="checkbox" name="remember"> <span>Remember me</span></label><a href="#faq">Forgot password?</a></div>
+            <button class="button button-primary account-submit" type="button">Log In <span>→</span></button>
+          </div>
+          <p class="form-note">Demo form only — authentication is not enabled.</p>
+        </article>
+        <article class="account-card register-card">
+          <div class="account-card-heading"><div><p class="eyebrow">NEW HERE?</p><h3>Join the game</h3></div><span class="account-symbol">✦</span></div>
+          <p class="register-copy">Make your profile, meet your squad, and keep every game in your orbit.</p>
+          <div class="account-form">
+            <label for="register-email">Email address</label><input id="register-email" name="register-email" type="email" placeholder="you@example.com" autocomplete="email">
+            <label for="register-username">Choose a username</label><input id="register-username" name="register-username" type="text" placeholder="Your gamer tag" autocomplete="username">
+            <button class="button button-outline account-submit" type="button">Create Account <span>→</span></button>
+          </div>
+          <p class="form-note">Registration is a visual mockup; no data is saved.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-main page-width">
+      <div class="footer-about"><a class="brand" href="#home"><span class="brand-mark">G</span><span>GAME<span class="accent">ZONE</span></span></a><p>Enter the Game. Become the Legend. Your home for games, esports, gear, and the people who play.</p><div class="social-links"><a href="#community" aria-label="Discord community">DS</a><a href="#community" aria-label="Instagram">IG</a><a href="#community" aria-label="YouTube">YT</a><a href="#community" aria-label="X social">X</a></div></div>
+      <div class="footer-column"><h3>EXPLORE</h3><a href="#games">Games</a><a href="#news">Latest News</a><a href="#esports">Esports</a><a href="#tournaments">Tournaments</a></div>
+      <div class="footer-column"><h3>COMMUNITY</h3><a href="#community">Find a Clan</a><a href="#community">Top Players</a><a href="#community">Community Hub</a><a href="#account">Join GAMEZONE</a></div>
+      <div class="footer-column"><h3>SUPPORT</h3><a href="#faq">Help Center</a><a href="#faq">FAQ</a><a href="mailto:support@gamezone.example">Contact Us</a><a href="#faq">Privacy &amp; Terms</a></div>
+      <div class="footer-newsletter"><h3>GET IN THE GAME</h3><p>News, drops, and updates. No spam, just the good stuff.</p><div class="newsletter-form"><label class="visually-hidden" for="newsletter-email">Email address</label><input type="email" id="newsletter-email" name="newsletter-email" placeholder="Your email address"><button type="button" aria-label="Subscribe">→</button></div><small>Newsletter form is a demo and does not subscribe.</small></div>
+    </div>
+    <div class="footer-bottom page-width"><span>© 2026 GAMEZONE. ALL RIGHTS RESERVED.</span><span>BUILT FOR THE LOVE OF THE GAME <b>♥</b></span><a href="#home">BACK TO TOP ↑</a></div>
+  </footer>
+</body>
+</html>
